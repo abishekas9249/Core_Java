@@ -1,0 +1,11 @@
+-- Grant SELECT, INSERT, UPDATE, DELETE privileges on the 'order' table to a user
+GRANT SELECT, INSERT, UPDATE, DELETE ON `your_database_name`.`order` TO 'username'@'hostname';
+
+-- Grant SELECT, INSERT, UPDATE, DELETE privileges on the 'customer' table to a user
+GRANT SELECT, INSERT, UPDATE, DELETE ON `your_database_name`.`customer` TO 'username'@'hostname';
+
+-- Revoke privileges on the 'order' table from a user
+REVOKE SELECT, INSERT, UPDATE, DELETE ON `your_database_name`.`order` FROM 'username'@'hostname';
+
+-- Revoke privileges on the 'customer' table from a user
+REVOKE SELECT, INSERT, UPDATE, DELETE ON `your_database_name`.`customer` FROM 'username'@'hostname';
