@@ -1,4 +1,4 @@
-### Maven Project Using Command Line Project
+# Maven Project Using Command Line Project
 
 ## File Structure Steps
 
@@ -12,7 +12,7 @@
   mvn --version
   mvn -v
   ```
-* Project Build Command
+* ### Project Build Command
   ```console
   mvn archetype:generate
   ```
@@ -64,4 +64,134 @@
   [INFO] Finished at: 2024-05-16T13:13:03+05:30
   [INFO] ------------------------------------------------------------------------
   ```
-*
+  * ### Maven Complie Command
+  ```console
+  mvn compile
+  [INFO] Scanning for projects...
+  [INFO]
+  [INFO] --------------------< com.virtusa:DemoMavenProject >--------------------
+  [INFO] Building DemoMavenProject 1.0-SNAPSHOT
+  [INFO]   from pom.xml
+  [INFO] --------------------------------[ jar ]---------------------------------
+  [INFO]
+  [INFO] --- resources:3.0.2:resources (default-resources) @ DemoMavenProject ---
+  [INFO] Using 'UTF-8' encoding to copy filtered resources.
+  [INFO] skip non existing resourceDirectory C:\Users\abishekas\IdeaProjects\Maven   Tasks\DemoMavenProject\src\main\resources
+  [INFO]
+  [INFO] --- compiler:3.8.0:compile (default-compile) @ DemoMavenProject ---
+  [INFO] Changes detected - recompiling the module!
+  [INFO] Compiling 1 source file to C:\Users\abishekas\IdeaProjects\Maven Tasks\DemoMavenProject\target\classes
+  [INFO] ------------------------------------------------------------------------
+  [INFO] BUILD SUCCESS
+  [INFO] ------------------------------------------------------------------------
+  [INFO] Total time:  1.631 s
+  [INFO] Finished at: 2024-05-16T14:12:27+05:30
+  [INFO] ------------------------------------------------------------------------
+  ```
+* ### Maven Test Running
+  ```console
+  mvn test
+  [INFO] Scanning for projects...
+  [INFO]
+  [INFO] --------------------< com.virtusa:DemoMavenProject >--------------------
+  [INFO] Building DemoMavenProject 1.0-SNAPSHOT
+  [INFO]   from pom.xml
+  [INFO] --------------------------------[ jar ]---------------------------------
+  [INFO]
+  [INFO] --- resources:3.0.2:resources (default-resources) @ DemoMavenProject ---
+  [INFO] Using 'UTF-8' encoding to copy filtered resources.
+  [INFO] skip non existing resourceDirectory C:\Users\abishekas\IdeaProjects\Maven Tasks\DemoMavenProject\src\main\resources
+  [INFO]
+  [INFO] --- compiler:3.8.0:compile (default-compile) @ DemoMavenProject ---
+  [INFO] Nothing to compile - all classes are up to date
+  [INFO]
+  [INFO] --- resources:3.0.2:testResources (default-testResources) @ DemoMavenProject ---
+  [INFO] Using 'UTF-8' encoding to copy filtered resources.
+  [INFO] skip non existing resourceDirectory C:\Users\abishekas\IdeaProjects\Maven Tasks\DemoMavenProject\src\test\resources
+  [INFO]
+  [INFO] --- compiler:3.8.0:testCompile (default-testCompile) @ DemoMavenProject ---
+  [INFO] Changes detected - recompiling the module!
+  [INFO] Compiling 1 source file to C:\Users\abishekas\IdeaProjects\Maven Tasks\DemoMavenProject\target\test-classes
+  [INFO]
+  [INFO] --- surefire:2.22.1:test (default-test) @ DemoMavenProject ---
+  Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit4/2.22.1/surefire-junit4-2.22.1.pom
+  Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit4/2.22.1/surefire-junit4-2.22.1.pom (3.1 kB at 7.5 kB/s)
+  Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-providers/2.22.1/surefire-providers-2.22.1.pom
+  Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-providers/2.22.1/surefire-providers-2.22.1.pom (2.5 kB at 89 kB/s)
+  Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit4/2.22.1/surefire-junit4-2.22.1.jar
+  Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit4/2.22.1/surefire-junit4-2.22.1.jar (85 kB at 1.3 MB/s)
+  [INFO]
+  [INFO] -------------------------------------------------------
+  [INFO]  T E S T S
+  [INFO] -------------------------------------------------------
+  [INFO] Running org.virtusa.AppTest
+  Welcome to Junit Testing
+  [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.065 s - in org.virtusa.AppTest
+  [INFO]
+  [INFO] Results:
+  [INFO]
+  [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+  [INFO]
+  [INFO] ------------------------------------------------------------------------
+  [INFO] BUILD SUCCESS
+  [INFO] ------------------------------------------------------------------------
+  [INFO] Total time:  4.750 s
+  [INFO] Finished at: 2024-05-16T14:16:51+05:30
+  [INFO] ------------------------------------------------------------------------
+  ```
+* ### Maven packaging to jar file
+  ```console
+  mvn package
+  [INFO] Scanning for projects...
+  [INFO]
+  [INFO] --------------------< com.virtusa:DemoMavenProject >--------------------
+  [INFO] Building DemoMavenProject 1.0-SNAPSHOT
+  [INFO]   from pom.xml
+  [INFO] --------------------------------[ jar ]---------------------------------
+  [INFO]
+  [INFO] --- resources:3.0.2:resources (default-resources) @ DemoMavenProject ---
+  [INFO] Using 'UTF-8' encoding to copy filtered resources.
+  [INFO] skip non existing resourceDirectory C:\Users\abishekas\IdeaProjects\Maven Tasks\DemoMavenProject\src\main\resources
+  [INFO]
+  [INFO] --- compiler:3.8.0:compile (default-compile) @ DemoMavenProject ---
+  [INFO] Nothing to compile - all classes are up to date
+  [INFO]
+  [INFO] --- resources:3.0.2:testResources (default-testResources) @ DemoMavenProject ---
+  [INFO] Using 'UTF-8' encoding to copy filtered resources.
+  [INFO] skip non existing resourceDirectory C:\Users\abishekas\IdeaProjects\Maven Tasks\DemoMavenProject\src\test\resources
+  [INFO]
+  [INFO] --- compiler:3.8.0:testCompile (default-testCompile) @ DemoMavenProject ---
+  [INFO] Nothing to compile - all classes are up to date
+  [INFO]
+  [INFO] --- surefire:2.22.1:test (default-test) @ DemoMavenProject ---
+  [INFO]
+  [INFO] -------------------------------------------------------
+  [INFO]  T E S T S
+  [INFO] -------------------------------------------------------
+  [INFO] Running org.virtusa.AppTest
+  Welcome to Junit Testing
+  [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.053 s - in org.virtusa.AppTest
+  [INFO]
+  [INFO] Results:
+  [INFO]
+  [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+  [INFO]
+  [INFO]
+  [INFO] --- jar:3.0.2:jar (default-jar) @ DemoMavenProject ---
+  [INFO] Building jar: C:\Users\abishekas\IdeaProjects\Maven Tasks\DemoMavenProject\target\DemoMavenProject-1.0-SNAPSHOT.jar
+  [INFO] ------------------------------------------------------------------------
+  [INFO] BUILD SUCCESS
+  [INFO] ------------------------------------------------------------------------
+  [INFO] Total time:  3.208 s
+  [INFO] Finished at: 2024-05-16T14:20:22+05:30
+  [INFO] ------------------------------------------------------------------------
+  ```
+* ### Maven Running the Jar File After Packaging
+ * #### Setting up the Jar file to Build Path  
+  ```console
+  set classpath=C:\Users\abishekas\IdeaProjects\Maven Tasks\DemoMavenProject\target\DemoMavenProject-1.0-SNAPSHOT.jar
+  ```
+ * #### Running up the Jar file 
+  ```console
+  java com.virtusa.App
+  ```
