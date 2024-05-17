@@ -195,3 +195,7 @@
   ```console
   java com.virtusa.App
   ```
+ * #### Run Main Class File Directly 
+   ```console
+   mvn exec:java -D exec.mainClass="com.virtusa.MainApp"
+   ```
